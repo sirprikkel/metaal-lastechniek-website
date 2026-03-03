@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Opdrachtgevers van MLT Metaal & Lastechniek — foodindustrie, metaal-, automotive- en kunststofverwerkende industrie.">
+  <title>Opdrachtgevers | MLT Metaal & Lastechniek</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { primary: '#0369A1', 'primary-dark': '#1E40AF', secondary: '#0EA5E9', cta: '#CA8A04', 'cta-hover': '#A16207', bg: '#F0F9FF', 'text-main': '#0C4A6E', 'security-green': '#059669' },
+        fontFamily: { heading: ['Outfit','sans-serif'], body: ['Rubik','sans-serif'] },
+        boxShadow: { 'card': '0 4px 6px rgba(0,0,0,0.1)' }
+      }}
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; } body { font-family: 'Rubik', sans-serif; color: #0C4A6E; }
+    h1,h2,h3,h4 { font-family: 'Outfit', sans-serif; }
+    .badge-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .badge-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(3,105,161,0.15); }
+    .mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; max-height: 0; opacity: 0; overflow: hidden; }
+    .mobile-menu.open { max-height: 400px; opacity: 1; }
+  </style>
+</head>
+<body class="bg-bg antialiased">
+
+  <!-- Navbar -->
+  <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="font-heading font-bold text-xl md:text-2xl text-primary cursor-pointer">MLT <span class="text-text-main font-medium">Metaal & Lastechniek</span></a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-text-main hover:text-primary transition-colors duration-200 font-medium cursor-pointer">Home</a>
+          <a href="diensten.html" class="text-text-main hover:text-primary transition-colors duration-200 font-medium cursor-pointer">Diensten</a>
+          <a href="opdrachtgevers.html" class="text-primary font-semibold cursor-pointer">Opdrachtgevers</a>
+          <a href="galerij.html" class="text-text-main hover:text-primary transition-colors duration-200 font-medium cursor-pointer">Galerij</a>
+          <a href="contact.html" class="bg-cta hover:bg-cta-hover text-white font-semibold px-6 py-2.5 rounded-lg transition-colors duration-200 cursor-pointer min-h-[44px] flex items-center">Contact</a>
+        </div>
+        <button onclick="document.getElementById('mobileMenu').classList.toggle('open')" class="md:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu">
+          <svg class="w-6 h-6 text-text-main" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <div id="mobileMenu" class="mobile-menu md:hidden pb-4">
+        <a href="index.html" class="block py-3 px-2 text-text-main hover:text-primary font-medium cursor-pointer">Home</a>
+        <a href="diensten.html" class="block py-3 px-2 text-text-main hover:text-primary font-medium cursor-pointer">Diensten</a>
+        <a href="opdrachtgevers.html" class="block py-3 px-2 text-primary font-semibold cursor-pointer">Opdrachtgevers</a>
+        <a href="galerij.html" class="block py-3 px-2 text-text-main hover:text-primary font-medium cursor-pointer">Galerij</a>
+        <a href="contact.html" class="block py-3 px-2 text-cta font-semibold cursor-pointer">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="pt-28 md:pt-36 pb-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <h1 class="font-heading font-bold text-4xl md:text-5xl text-text-main mb-4">Opdrachtgevers</h1>
+      <p class="text-text-main/70 text-lg max-w-2xl">Door de zeer uitgebreide kennis en kunde van MLT zijn wij breed inzetbaar bij verschillende branches.</p>
+    </div>
+  </section>
+
+  <!-- Branches -->
+  <section class="py-16 md:py-24 bg-bg">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="badge-card bg-white rounded-2xl p-8 shadow-card">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-text-main mb-3">Foodindustrie</h3>
+          <p class="text-text-main/70 leading-relaxed">Het gros van onze opdrachtgevers komt uit de foodindustrie waarvoor wij veelal machinecomponenten maken en/of zorg dragen voor pijpnetwerksystemen.</p>
+        </div>
+        <div class="badge-card bg-white rounded-2xl p-8 shadow-card">
+          <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-text-main mb-3">Metaalindustrie</h3>
+          <p class="text-text-main/70 leading-relaxed">Breed inzetbaar in de metaalverwerkende industrie voor diverse laswerkzaamheden en constructies.</p>
+        </div>
+        <div class="badge-card bg-white rounded-2xl p-8 shadow-card">
+          <div class="w-14 h-14 bg-cta/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-text-main mb-3">Automotive</h3>
+          <p class="text-text-main/70 leading-relaxed">Precisie-laswerk voor de automotive-industrie, waar kwaliteit en betrouwbaarheid centraal staan.</p>
+        </div>
+        <div class="badge-card bg-white rounded-2xl p-8 shadow-card">
+          <div class="w-14 h-14 bg-security-green/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-security-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-text-main mb-3">Kunststofverwerkend</h3>
+          <p class="text-text-main/70 leading-relaxed">Ondersteuning aan de kunststofverwerkende industrie met gespecialiseerde las- en constructiewerkzaamheden.</p>
+        </div>
+        <div class="badge-card bg-white rounded-2xl p-8 shadow-card">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-text-main mb-3">Constructiewerk</h3>
+          <p class="text-text-main/70 leading-relaxed">Industriële bordessen en hekwerken op maat gemaakt met professioneel vakmanschap.</p>
+        </div>
+        <div class="badge-card bg-white rounded-2xl p-8 shadow-card">
+          <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-text-main mb-3">Particulier</h3>
+          <p class="text-text-main/70 leading-relaxed">Hoewel het niet onze core business is werken wij ook regelmatig voor de particuliere sector.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 bg-primary">
+    <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+      <h2 class="font-heading font-bold text-3xl md:text-4xl text-white mb-6">Ook samenwerken met MLT?</h2>
+      <p class="text-white/80 text-lg mb-8">Neem contact op en ontdek wat wij voor uw bedrijf kunnen betekenen.</p>
+      <a href="contact.html" class="bg-cta hover:bg-cta-hover text-white font-semibold px-8 py-3.5 rounded-lg transition-colors duration-200 cursor-pointer min-h-[44px] inline-flex items-center justify-center">Neem contact op</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-text-main text-white/80 py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="font-heading font-bold text-xl text-white mb-4">MLT Metaal & Lastechniek</h3>
+          <p class="text-white/60">Gespecialiseerd lasbedrijf in de regio Oss.</p>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-white mb-4">Diensten</h4>
+          <ul class="space-y-2">
+            <li><a href="diensten.html" class="hover:text-white cursor-pointer">TIG-lassen</a></li>
+            <li><a href="diensten.html" class="hover:text-white cursor-pointer">MIG-lassen</a></li>
+            <li><a href="diensten.html" class="hover:text-white cursor-pointer">Piping</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-white mb-4">Contact</h4>
+          <p>De Hammen 34, 5371 MK Ravenstein</p>
+          <p><a href="tel:0486700216" class="hover:text-white cursor-pointer">0486 - 700 216</a></p>
+          <p><a href="mailto:info@metaal-lastechniek.nl" class="hover:text-white cursor-pointer">info@metaal-lastechniek.nl</a></p>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-10 pt-8 text-center">
+        <p class="text-white/40 text-sm">Gebouwd door <a href="https://www.code-lieshout.nl" class="text-white/60 hover:text-white cursor-pointer">Code Lieshout</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galerij — Bekijk het professionele laswerk van MLT Metaal & Lastechniek in Ravenstein.">
+  <title>Galerij | MLT Metaal & Lastechniek</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { primary: '#0369A1', 'primary-dark': '#1E40AF', secondary: '#0EA5E9', cta: '#CA8A04', 'cta-hover': '#A16207', bg: '#F0F9FF', 'text-main': '#0C4A6E' },
+        fontFamily: { heading: ['Outfit','sans-serif'], body: ['Rubik','sans-serif'] },
+        boxShadow: { 'card': '0 4px 6px rgba(0,0,0,0.1)' }
+      }}
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; } body { font-family: 'Rubik', sans-serif; color: #0C4A6E; }
+    h1,h2,h3 { font-family: 'Outfit', sans-serif; }
+    .mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; max-height: 0; opacity: 0; overflow: hidden; }
+    .mobile-menu.open { max-height: 400px; opacity: 1; }
+    .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.92); z-index: 100; align-items: center; justify-content: center; }
+    .lightbox.active { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+    .gallery-item { transition: transform 0.3s ease; }
+    .gallery-item:hover { transform: scale(1.03); }
+  </style>
+</head>
+<body class="bg-bg antialiased">
+
+  <!-- Navbar -->
+  <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="font-heading font-bold text-xl md:text-2xl text-primary cursor-pointer">MLT <span class="text-text-main font-medium">Metaal & Lastechniek</span></a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-text-main hover:text-primary transition-colors duration-200 font-medium cursor-pointer">Home</a>
+          <a href="diensten.html" class="text-text-main hover:text-primary transition-colors duration-200 font-medium cursor-pointer">Diensten</a>
+          <a href="opdrachtgevers.html" class="text-text-main hover:text-primary transition-colors duration-200 font-medium cursor-pointer">Opdrachtgevers</a>
+          <a href="galerij.html" class="text-primary font-semibold cursor-pointer">Galerij</a>
+          <a href="contact.html" class="bg-cta hover:bg-cta-hover text-white font-semibold px-6 py-2.5 rounded-lg transition-colors duration-200 cursor-pointer min-h-[44px] flex items-center">Contact</a>
+        </div>
+        <button onclick="document.getElementById('mobileMenu').classList.toggle('open')" class="md:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu">
+          <svg class="w-6 h-6 text-text-main" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <div id="mobileMenu" class="mobile-menu md:hidden pb-4">
+        <a href="index.html" class="block py-3 px-2 text-text-main hover:text-primary font-medium cursor-pointer">Home</a>
+        <a href="diensten.html" class="block py-3 px-2 text-text-main hover:text-primary font-medium cursor-pointer">Diensten</a>
+        <a href="opdrachtgevers.html" class="block py-3 px-2 text-text-main hover:text-primary font-medium cursor-pointer">Opdrachtgevers</a>
+        <a href="galerij.html" class="block py-3 px-2 text-primary font-semibold cursor-pointer">Galerij</a>
+        <a href="contact.html" class="block py-3 px-2 text-cta font-semibold cursor-pointer">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="pt-28 md:pt-36 pb-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <h1 class="font-heading font-bold text-4xl md:text-5xl text-text-main mb-4">Galerij</h1>
+      <p class="text-text-main/70 text-lg max-w-2xl">Professioneel laswerk in onze werkplaats op Industrieterrein 'De Bulk' in Ravenstein. Klik op een foto om te vergroten.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="py-16 bg-bg">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+        <div class="gallery-item rounded-xl overflow-hidden shadow-card cursor-pointer break-inside-avoid" onclick="openLightbox('images/google_place_1.jpg')">
+          <img src="images/google_place_1.jpg" alt="Lasser werkt aan RVS balustrade op lastafel" class="w-full object-cover" loading="lazy">
+          <div class="p-4 bg-white">
+            <p class="text-text-main font-medium text-sm">RVS balustrade — laswerk op maat</p>
+          </div>
+        </div>
+        <div class="gallery-item rounded-xl overflow-hidden shadow-card cursor-pointer break-inside-avoid" onclick="openLightbox('images/google_place_2.jpg')">
+          <img src="images/google_place_2.jpg" alt="Precisie uitlijning met klemwerk" class="w-full object-cover" loading="lazy">
+          <div class="p-4 bg-white">
+            <p class="text-text-main font-medium text-sm">Nauwkeurige uitlijning en klemwerk</p>
+          </div>
+        </div>
+        <div class="gallery-item rounded-xl overflow-hidden shadow-card cursor-pointer break-inside-avoid" onclick="openLightbox('images/google_place_3.jpg')">
+          <img src="images/google_place_3.jpg" alt="Laswerk aan grote RVS constructie" class="w-full object-cover" loading="lazy">
+          <div class="p-4 bg-white">
+            <p class="text-text-main font-medium text-sm">RVS constructiewerk — balken en kokers</p>
+          </div>
+        </div>
+        <div class="gallery-item rounded-xl overflow-hidden shadow-card cursor-pointer break-inside-avoid" onclick="openLightbox('images/google_place_4.jpg')">
+          <img src="images/google_place_4.jpg" alt="Complexe buisconstructie laswerk" class="w-full object-cover" loading="lazy">
+          <div class="p-4 bg-white">
+            <p class="text-text-main font-medium text-sm">Complexe buisconstructies</p>
+          </div>
+        </div>
+        <div class="gallery-item rounded-xl overflow-hidden shadow-card cursor-pointer break-inside-avoid" onclick="openLightbox('images/google_place_5.jpg')">
+          <img src="images/google_place_5.jpg" alt="TIG-laswerk aan RVS buizen en leidingwerk" class="w-full object-cover" loading="lazy">
+          <div class="p-4 bg-white">
+            <p class="text-text-main font-medium text-sm">TIG-laswerk — piping en leidingwerk</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary">
+    <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+      <h2 class="font-heading font-bold text-3xl md:text-4xl text-white mb-6">Onder de indruk van ons werk?</h2>
+      <p class="text-white/80 text-lg mb-8">Neem contact op voor een vrijblijvend gesprek over uw project.</p>
+      <a href="contact.html" class="bg-cta hover:bg-cta-hover text-white font-semibold px-8 py-3.5 rounded-lg transition-colors duration-200 cursor-pointer min-h-[44px] inline-flex items-center justify-center">Neem contact op</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-text-main text-white/80 py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="font-heading font-bold text-xl text-white mb-4">MLT Metaal & Lastechniek</h3>
+          <p class="text-white/60">Gespecialiseerd lasbedrijf in de regio Oss.</p>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-white mb-4">Diensten</h4>
+          <ul class="space-y-2">
+            <li><a href="diensten.html" class="hover:text-white cursor-pointer">TIG-lassen</a></li>
+            <li><a href="diensten.html" class="hover:text-white cursor-pointer">MIG-lassen</a></li>
+            <li><a href="diensten.html" class="hover:text-white cursor-pointer">Piping</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-white mb-4">Contact</h4>
+          <p>De Hammen 34, 5371 MK Ravenstein</p>
+          <p><a href="tel:0486700216" class="hover:text-white cursor-pointer">0486 - 700 216</a></p>
+          <p><a href="mailto:info@metaal-lastechniek.nl" class="hover:text-white cursor-pointer">info@metaal-lastechniek.nl</a></p>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-10 pt-8 text-center">
+        <p class="text-white/40 text-sm">Gebouwd door <a href="https://www.code-lieshout.nl" class="text-white/60 hover:text-white cursor-pointer">Code Lieshout</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="absolute top-4 right-4 text-white/80 hover:text-white min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" aria-label="Sluiten">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="Vergrote afbeelding">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+
+</body>
+</html>
